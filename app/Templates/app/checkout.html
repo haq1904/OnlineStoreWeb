@@ -1,0 +1,44 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block checkout_content %}
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="box-element" id="form-wrapper">
+        <form id="form">
+          <div id="user-info">
+            <div class="form-field">
+              <label for="user-name">User Name</label>
+              <input required class="form-control" name="user-name" placeholder="User name..." />
+            </div>
+            <div class="form-field">
+              <label for="email-user">Email</label>
+              <input required class="form-control" name="email-user" placeholder="Email..." />
+            </div>
+          </div>
+
+          <div id="shipping-info">
+            <hr />
+            <div class="form-field">
+              <input required class="form-control" name="address" placeholder="Address..." />
+            </div>
+            <div class="form-field">
+              <input required class="form-control" name="city" placeholder="City..." />
+            </div>
+            <div class="form-field">
+              <input required class="form-control" name="country" placeholder="Country..." />
+            </div>
+            <div class="form-field">
+              <input required class="form-control" name="phone" placeholder="Phone..." />
+            </div>
+          </div>
+
+          <hr />
+          <div id="form-container">
+            <input style="width: 100%" class="btn btn-success" type="submit" value="Continue" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
